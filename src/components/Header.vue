@@ -17,7 +17,7 @@ export default {
     img{
       height: 50px;
       width: 50px;
-      paddi
+      padding: 5px;
     }
 }
 </style>
