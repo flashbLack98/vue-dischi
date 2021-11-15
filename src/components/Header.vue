@@ -1,6 +1,6 @@
 <template>
   <div class="header_container">
-      ciao
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/768px-Spotify_logo_without_text.svg.png" alt="">
   </div>
 </template>
 
@@ -12,7 +12,12 @@ export default {
 
 <style lang="scss" scoped>
 .header_container{
-    background-color: grey;
+    background-color: rgba(43,58,70,255);
     height: 50px;
+    img{
+      height: 50px;
+      width: 50px;
+      paddi
+    }
 }
 </style>

@@ -39,6 +39,6 @@ mounted(){
     .container{
         display: flex;
         flex-wrap: wrap;
-        background-color: rgb(12, 12, 82);
+        background-color: rgba(25,45,59,255);
     }
 </style>

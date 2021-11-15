@@ -21,7 +21,7 @@ props: ["poster", "title", "author", "year"]
     width: 200px;
     height: 300px;
     margin: 50px;
-    background-color: gray;
+    background-color: rgba(43,58,70,255);
     display: flex;
     flex-direction: column;
     align-content: center;
