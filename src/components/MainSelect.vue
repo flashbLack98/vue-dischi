@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select v-model="selectGenre" @change="$emit('GenreSelection', selectGenre)" class="form-select" aria-label="Default select example">
+    <select v-model="selectGenre" @change="$emit('GenreSelection', selectGenre)" class="form-select w-25 mt-5" aria-label="Default select example">
         <option selected value="">All</option>
         <option v-for="genre,i in genreList" :key="i" :value="genre">{{genre}}</option>
     </select>
@@ -30,5 +30,5 @@ div{
 
 /*  fare un array vuoto dei generi da mettere nel select
     controlliamo il genere delle carte
-    e se il genere non esiste lio pushiamo
+    e se il genere non esiste lo pushiamo
  */

@@ -1,7 +1,7 @@
 <template>
   <div class="my_card">
       <div class="img_container"><img :src="poster" alt=""></div>
-      <h3 class=" m-0">{{ title }}</h3>
+      <h3 class=" m-0 fs-5">{{ title }}</h3>
       <p class=" m-0">{{ author }}</p>
       <p class=" m-0">{{ year }}</p>
 
@@ -20,8 +20,8 @@ props: ["poster", "title", "author", "year" , "genre"],
 
 <style lang="scss" scoped>
 .my_card{
-    width: calc(100% / 5 - 30px);
-    height: 300px;
+    width: calc(100% / 5 - 30px) ;
+    height: 250px;
     background-color: rgba(43,58,70,255);
     display: flex;
     flex-direction: column;

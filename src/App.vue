@@ -22,5 +22,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
  
 }
-//@import "./styles/App.scss"
+@import "./styles/App.scss"
 </style>

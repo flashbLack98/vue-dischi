@@ -1,6 +1,8 @@
 <template>
 <div>
-  <MainSelect :genreList="genreList" @GenreSelection="FilterCard"></MainSelect>
+  <MainSelect :genreList="genreList" @GenreSelection="filterCard"></MainSelect>
+  <div class="background">
+
   <div class="my_container">
       <MainCard 
       v-for="character,i in characterList" :key="i"
@@ -10,6 +12,7 @@
       :year="character.year" 
       :genre="character.genre">
       </MainCard>
+  </div>
   </div>
 </div>
 </template>
@@ -27,7 +30,6 @@ data(){
     return{
         characterList:"",
         genreList:"",
-
     }
 },
 
@@ -47,7 +49,7 @@ mounted(){
     })
   },
 methods:{
-  FilterCard(genreSelected){
+  filterCard(genreSelected){
     console.log(genreSelected);
     //this.characterList.filter(genreSelected)
     axios.get("https://flynn.boolean.careers/exercises/api/array/music")
@@ -66,13 +68,18 @@ methods:{
 </script>
 
 <style lang="scss" scoped>
-    .my_container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: rgba(25,45,59,255);
-        gap: 30px;
-        padding: 30px 0;
-        min-height:80vh ;
+    .background{
+      background-color: rgba(25,45,59,255);
+
+      .my_container{
+          width: 1000px;
+          display: flex;
+          flex-wrap: wrap;
+          min-height:90vh ;
+          margin: auto;
+          gap: 30px;
+          padding-bottom: 30px;
+          align-content: center;
+      }
     }
 </style>

@@ -18,6 +18,7 @@ export default {
       height: 40px;
       width: 40px;
       padding: 5px;
+      margin-top: 5px;
     }
 }
 </style>
