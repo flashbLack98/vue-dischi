@@ -1,9 +1,10 @@
 <template>
-  <div class="card">
+  <div class="my_card">
       <div class="img_container"><img :src="poster" alt=""></div>
-      <h3>{{ title }}</h3>
-      <p>{{ author }}</p>
-      <p>{{ year }}</p>
+      <h3 class=" m-0">{{ title }}</h3>
+      <p class=" m-0">{{ author }}</p>
+      <p class=" m-0">{{ year }}</p>
+
   </div>
 </template>
 
@@ -12,19 +13,18 @@
 
 export default {
 name:"MainCard",
-props: ["poster", "title", "author", "year"]
+props: ["poster", "title", "author", "year" , "genre"],
+
 }
 </script>
 
 <style lang="scss" scoped>
-.card{
-    width: calc(100% / 5 - 5px);
+.my_card{
+    width: calc(100% / 5 - 30px);
     height: 300px;
     background-color: rgba(43,58,70,255);
     display: flex;
     flex-direction: column;
-    align-content: center;
-    margin: 50px 10px;
     .img_container{
         width: 100px;
         height: 100px;
@@ -37,11 +37,9 @@ props: ["poster", "title", "author", "year"]
     }
     h3{
         text-align: center;
-        margin: 0;
     }
     p{
         text-align: center;
-        padding: 0 5px;
     }
 }
 </style>
