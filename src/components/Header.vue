@@ -15,8 +15,8 @@ export default {
     background-color: rgba(43,58,70,255);
     height: 50px;
     img{
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       padding: 5px;
     }
 }

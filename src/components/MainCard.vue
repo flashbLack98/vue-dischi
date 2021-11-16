@@ -18,13 +18,13 @@ props: ["poster", "title", "author", "year"]
 
 <style lang="scss" scoped>
 .card{
-    width: 200px;
+    width: calc(100% / 5 - 5px);
     height: 300px;
-    margin: 50px;
     background-color: rgba(43,58,70,255);
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 50px 10px;
     .img_container{
         width: 100px;
         height: 100px;
@@ -37,6 +37,7 @@ props: ["poster", "title", "author", "year"]
     }
     h3{
         text-align: center;
+        margin: 0;
     }
     p{
         text-align: center;

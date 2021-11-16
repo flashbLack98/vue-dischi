@@ -38,7 +38,9 @@ mounted(){
 <style lang="scss" scoped>
     .container{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         background-color: rgba(25,45,59,255);
+        gap: 30px;
     }
 </style>
