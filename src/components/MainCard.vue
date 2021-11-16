@@ -43,3 +43,7 @@ props: ["poster", "title", "author", "year" , "genre"],
     }
 }
 </style>
+
+/*  se il select è rock 
+    allora stampa solo le carte rock
+ */

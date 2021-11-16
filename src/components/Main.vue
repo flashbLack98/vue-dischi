@@ -1,6 +1,6 @@
 <template>
 <div>
-  <MainSelect :genreList="genreList"></MainSelect>
+  <MainSelect :genreList="genreList" @GenreSelection="FilterCard"></MainSelect>
   <div class="my_container">
       <MainCard 
       v-for="character,i in characterList" :key="i"
@@ -25,8 +25,9 @@ export default {
 name: "Main",
 data(){
     return{
-        characterList:[],
-        genreList:""
+        characterList:"",
+        genreList:"",
+
     }
 },
 
@@ -35,7 +36,7 @@ components:{ MainCard, MainSelect },
 mounted(){
     axios.get("https://flynn.boolean.careers/exercises/api/array/music")
     .then(resp => {
-      this.characterList.push(...resp.data.response)
+      this.characterList=(resp.data.response)
 
     }),
      axios.get("https://flynn.boolean.careers/exercises/api/array/music")
@@ -44,7 +45,22 @@ mounted(){
       arr=(resp.data.response.map(function (el) {return el.genre}))
       this.genreList=[...new Set(arr)]
     })
+  },
+methods:{
+  FilterCard(genreSelected){
+    console.log(genreSelected);
+    //this.characterList.filter(genreSelected)
+    axios.get("https://flynn.boolean.careers/exercises/api/array/music")
+    .then(resp => {
+      this.characterList=(resp.data.response.filter( function (el) {return el.genre.includes(genreSelected)}))
+      
+      //console.log(resp.data.response.map( function (el) {return el.genre}));
+      console.log(resp.data.response.filter( function (el) {return el.genre.includes(genreSelected)}));
+   })
+    
+
   }
+}
 
 }
 </script>
@@ -57,5 +73,6 @@ mounted(){
         background-color: rgba(25,45,59,255);
         gap: 30px;
         padding: 30px 0;
+        min-height:80vh ;
     }
 </style>

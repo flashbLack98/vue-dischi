@@ -1,8 +1,8 @@
 <template>
   <div>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option v-for="genre,i in genreList" :key="i" value="1">{{genre}}</option>
+    <select v-model="selectGenre" @change="$emit('GenreSelection', selectGenre)" class="form-select" aria-label="Default select example">
+        <option selected value="">All</option>
+        <option v-for="genre,i in genreList" :key="i" :value="genre">{{genre}}</option>
     </select>
   </div>
 </template>
@@ -10,6 +10,11 @@
 <script>
 export default {
 name: "MainSelect",
+data(){
+    return{
+        selectGenre: ""
+    }
+},
 props:[ "genreList" ]
 
 }
